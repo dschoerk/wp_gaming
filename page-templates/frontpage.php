@@ -33,20 +33,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 							<?php if ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 								<h3><?php the_title(); ?></h3>
-								<div class="text"><?php get_the_excerpt(); ?></div>
-								<a href="<?php echo get_permalink(); ?>"> read more...</a>
+								<div class="text"><?php the_excerpt(); ?></div>
+								<!-- <a href="<?php echo get_permalink(); ?>"> read more...</a> -->
 							<?php endif; ?>
 						</div>
 						<div class="col-md-6 post-list-compact">
 							<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
 								<div class="bevelled d-flex flex-row post">
-									<img src="http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png" style="margin-left: 25px; width: 64px; height: 64px">
-									<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
-										<div class="title"><?php the_title(); ?></div>
+									<img class="post-img" src="<?php if(has_post_thumbnail()){ echo(the_post_thumbnail_url()); } else { echo(bloginfo('template_directory') . '/img/logo_tiny.png'); } ?>">
+
+									<div class="d-flex flex-column post-meta">
+										<div class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
 										<div>
+											<span class="date"><span class="fa fa-calendar"></span> <?php the_date(); ?></span> -
 											<span class="author">by <?php the_author(); ?></span>
-											<span class="date"><span class="fa fa-calendar"></span> <?php the_date(); ?></span>
 										</div>
 									</div>
 								</div>

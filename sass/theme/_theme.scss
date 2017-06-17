@@ -1,7 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-$bg1: rgb(33, 37, 40);
-
 
 .heading1 {
   font-size: 80px;
@@ -10,11 +8,8 @@ $bg1: rgb(33, 37, 40);
   color: white;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(5, 199, 247), 0 0 35px rgb(5, 199, 247), 0 0 40px rgb(5, 199, 247);
   
-  color: #228DFF;
-  
+  color: #228DFF; 
 }
-
-
 
 .bevelled {
   background-color: #1d1d1d;
@@ -90,10 +85,32 @@ $bg1: rgb(33, 37, 40);
 
     .post {
         margin-top: 0px;
+        padding: 8px;
+
+        .post-img {
+            width: 64px; 
+            height: 64px;
+        }
+
+        .post-meta {
+            flex-grow: 1; 
+            justify-content: center; 
+            margin-left: 8px;
+        }
     }
 
     .post ~ .post {
         margin-top: 12px;
+    }
+
+    .date {
+        color: #333;
+        font-size: 12px;
+    }
+
+    .author {
+        color: $primary-color;
+        font-size: 12px;
     }
 }
 
@@ -107,6 +124,7 @@ $bg1: rgb(33, 37, 40);
     }
 }
 
+
 ///
 // Navbar
 .navbar {
@@ -116,12 +134,12 @@ $bg1: rgb(33, 37, 40);
 
     .active {
         color: white;
-        background-image: linear-gradient(to top, #096aa1, #26c3f6);
+        background-image: linear-gradient(to top, darken($primary-color, 20%), $primary-color);
     }
 
     li:hover {
         color: white;
-        background-image: linear-gradient(to top, #096aa1, #26c3f6);
+        background-image: linear-gradient(to top, darken($primary-color, 20%), $primary-color);
     }
 
     .btn {

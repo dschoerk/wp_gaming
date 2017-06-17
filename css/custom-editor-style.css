@@ -8939,9 +8939,23 @@ h1.navbar-brand a:hover {
 .post-list-compact {
   width: 100%; }
   .post-list-compact .post {
-    margin-top: 0px; }
+    margin-top: 0px;
+    padding: 8px; }
+    .post-list-compact .post .post-img {
+      width: 64px;
+      height: 64px; }
+    .post-list-compact .post .post-meta {
+      flex-grow: 1;
+      justify-content: center;
+      margin-left: 8px; }
   .post-list-compact .post ~ .post {
     margin-top: 12px; }
+  .post-list-compact .date {
+    color: #333;
+    font-size: 12px; }
+  .post-list-compact .author {
+    color: #0ebcd0;
+    font-size: 12px; }
 
 .copyright {
   font-size: 12px;
@@ -8954,10 +8968,10 @@ h1.navbar-brand a:hover {
   background-color: rgba(16, 16, 16, 0); }
   .navbar .active {
     color: white;
-    background-image: linear-gradient(to top, #096aa1, #26c3f6); }
+    background-image: linear-gradient(to top, #086670, #0ebcd0); }
   .navbar li:hover {
     color: white;
-    background-image: linear-gradient(to top, #096aa1, #26c3f6); }
+    background-image: linear-gradient(to top, #086670, #0ebcd0); }
   .navbar .btn, .navbar .wpcf7 input[type=submit], .wpcf7 .navbar input[type=submit] {
     padding: 0; }
 
