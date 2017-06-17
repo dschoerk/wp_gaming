@@ -1,5 +1,27 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+.wrapper {
+    background-color: $bg1;
+    padding: 0;
+
+    .container {
+        padding: 0;
+    }
+}
+
+.entry-header {
+    .entry-title {
+        color: #eee;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        float: left;
+        width: 100%;
+        padding: 15px;
+
+        @extend .stripe-test;
+    }
+}
 
 .heading1 {
   font-size: 80px;
@@ -79,6 +101,7 @@
     color: #ccc;
     margin: 0;
 }
+
 
 .post-list-compact {
     width: 100%;

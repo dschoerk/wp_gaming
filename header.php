@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
 
-
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" type="text/css" media="screen" />
 
 	<?php wp_head(); ?>
 </head>
