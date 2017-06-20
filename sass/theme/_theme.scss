@@ -1,11 +1,23 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+    filter: blur(5px);
+    transition: all 0.2s ease
+}
+
+.no-blur {
+    filter: none;
+}
+
+div {
+    font-family: Roboto, Arial;
+}
 
 .wrapper {
     background-color: $bg1;
-    padding: 0;
+    // padding: 0;
 
     .container {
-        padding: 0;
+        // padding: 0;
     }
 }
 
@@ -23,8 +35,25 @@
     }
 }
 
+.header {
+    height: 170px;
+
+    div {
+        height: 90px;
+            line-height: 40px;
+    }
+
+    img.banner {
+        position: relative;
+        width: 250px;
+        z-index: 100;
+        left: -50%;
+        top: -70px
+    }
+}
+
 .heading1 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 3000;
   font-family: Iceland;
   color: white;
@@ -67,7 +96,7 @@
     background: repeating-linear-gradient(
         -45deg,
         rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.5) 8px,
+        rgba(0, 0, 0, 0.5) 7px,
         rgba(0, 0, 0, 0.5) 0px,
         rgba(1, 0, 0, 0.8) 5px
     ),
@@ -102,6 +131,47 @@
     margin: 0;
 }
 
+/*li {
+    transition: all .2s ease-in-out;
+    opacity: 1.0;
+    line-height: 40px;
+}
+
+li:hover {
+    color: white;
+    box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
+    background-image: -webkit-linear-gradient(bottom, #096aa1, #26c3f6);
+    background-image: -moz-linear-gradient(bottom, #096aa1, #26c3f6);
+    background-image: -o-linear-gradient(bottom, #096aa1, #26c3f6);
+    background-image: linear-gradient(to top, #096aa1, #26c3f6);
+    //background-color: green;
+}*/
+
+.post-img {
+    width: 64px; 
+    height: 64px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    transition: all .2s ease-in-out;
+}
+
+.post-img:hover {
+    box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
+}
+
+.post-img-big {
+    width: 100%; 
+    //max-height: 100px;
+    //height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
 
 .post-list-compact {
     width: 100%;
@@ -110,10 +180,7 @@
         margin-top: 0px;
         padding: 8px;
 
-        .post-img {
-            width: 64px; 
-            height: 64px;
-        }
+
 
         .post-meta {
             flex-grow: 1; 
@@ -127,7 +194,7 @@
     }
 
     .date {
-        color: #333;
+        color: #444;
         font-size: 12px;
     }
 
@@ -139,7 +206,7 @@
 
 .copyright {
     font-size: 12px;
-    color: #292929;
+    color: #424242;
 
     a {
         color: #075b64;
@@ -147,6 +214,29 @@
     }
 }
 
+.box-title {
+    padding: 6px; 
+    padding-left: 12px; 
+    padding-top: 9px; 
+    text-transform: uppercase;
+    font-family: Roboto; 
+    font-weight: 800; 
+    font-size: 14px;
+}
+
+.widget-title {
+    @extend .box-title;
+    @extend .stripe-test;
+    @extend .bevelled;
+
+    
+        margin-bottom: 0px;
+    
+}
+
+.avatar-block {
+    @extend .content-test;
+}
 
 ///
 // Navbar
@@ -160,10 +250,23 @@
         background-image: linear-gradient(to top, darken($primary-color, 20%), $primary-color);
     }
 
+    li {
+        transition: all .2s ease-in-out;
+        opacity: 1.0;
+        line-height: 40px;
+    }
+
     li:hover {
         color: white;
-        background-image: linear-gradient(to top, darken($primary-color, 20%), $primary-color);
+        box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
+        background-image: -webkit-linear-gradient(bottom, #096aa1, #26c3f6);
+        background-image: -moz-linear-gradient(bottom, #096aa1, #26c3f6);
+        background-image: -o-linear-gradient(bottom, #096aa1, #26c3f6);
+        background-image: linear-gradient(to top, #096aa1, #26c3f6);
+        //background-color: green;
     }
+
+
 
     .btn {
         padding: 0;

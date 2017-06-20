@@ -32,7 +32,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="col-md-6">
 						
 							<?php if ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-								<h3><?php the_title(); ?></h3>
+								
+								<a href="<?php echo get_permalink(); ?>">
+									<div class="post-img post-img-big" style="background-image: url(<?php if(has_post_thumbnail()){ echo(the_post_thumbnail_url()); } else { echo(bloginfo('template_directory') . '/img/logo_tiny.png'); } ?>)">
+										<img src="<?php if(has_post_thumbnail()){ echo(the_post_thumbnail_url()); } else { echo(bloginfo('template_directory') . '/img/logo_tiny.png'); } ?>" style="visibility: hidden;" />
+									</div>
+								</a>
+								<a href="<?php echo get_permalink(); ?>">
+									<h3><?php the_title(); ?></h3>
+								</a>
 								<div class="text"><?php the_excerpt(); ?></div>
 								<!-- <a href="<?php echo get_permalink(); ?>"> read more...</a> -->
 							<?php endif; ?>
@@ -41,8 +49,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
 								<div class="bevelled d-flex flex-row post">
-									<img class="post-img" src="<?php if(has_post_thumbnail()){ echo(the_post_thumbnail_url()); } else { echo(bloginfo('template_directory') . '/img/logo_tiny.png'); } ?>">
-
+									<a href="<?php echo get_permalink(); ?>">
+										<div class="post-img" style="background-image: url(<?php if(has_post_thumbnail()){ echo(the_post_thumbnail_url()); } else { echo(bloginfo('template_directory') . '/img/logo_tiny.png'); } ?>)"></div>
+									</a>
 									<div class="d-flex flex-column post-meta">
 										<div class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
 										<div>

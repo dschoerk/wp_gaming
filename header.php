@@ -21,6 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 	<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" type="text/css" media="screen" />
@@ -28,19 +30,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body id="body" <?php body_class(); ?> >
 
-	<div class="container" id="page" style="background-color: rgba(0,0,0,1); padding: 0;">
+	<div class="container" id="page" style="background-color: rgba(0,0,0,0); padding: 0;">
 
 		<!-- ******************* The Navbar Area ******************* -->
 
-		<div class="container">
+		<div class="container" style="height: 32px; background-color: rgba(0,0,0,0);background: rgb(0, 0, 0) transparent;">
 			
 		</div>
 
-		<div class="container bevelled d-flex flex-row align-items-center">
+		<div class="container bevelled d-flex flex-row align-items-center header">
+
+			<div style="position: absolute; left: 50%">
+				<img class="banner" src="<?php echo(bloginfo('template_directory') . '/img/logo.png') ?>"/>
+			</div>
+
 			<div class="heading1 logo mr-auto col" style="color: white" style="flex-grow: 1;">
-				D43
+				Gaming<br>Community
 			</div>
 
 			<!-- User -->
@@ -76,7 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-2">
 					<div>
 						<div class="bevelled d-flex flex-row post">
-							<img src="<?php get_avatar_url($current_user->ID) ?>" style="margin-left: 25px; width: 64px; height: 64px">
+							<img src="<?php $img = get_avatar_url($current_user->ID); if($img) { echo($img); } else { echo(""); } ?>" style="margin-left: 25px; width: 64px; height: 64px">
 							<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
 								<div>
 									<span class="author"><?php echo($current_user->display_name) ?></span>
@@ -167,7 +174,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<script>
 	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
+		// $('[data-toggle="tooltip"]').tooltip();
+
+		$("body").toggleClass("no-blur");
 	});
 	</script>
 
