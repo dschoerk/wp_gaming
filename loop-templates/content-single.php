@@ -12,7 +12,7 @@
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta" style="position: absolute; right: 20px; top: 25px; font-size: 12px; ">
 
 			<?php understrap_posted_on(); ?>
 

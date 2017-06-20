@@ -273,4 +273,13 @@ li:hover {
     }
 }
 
+.wp-post-image {
+    width: 100%;
+}
+
+.entry-content {
+    @extend .bevelled;
+    @extend .content-test;
+}
+
 ///

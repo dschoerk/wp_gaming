@@ -8916,7 +8916,7 @@ div {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #05c7f7, 0 0 35px #05c7f7, 0 0 40px #05c7f7;
   color: #228DFF; }
 
-.bevelled, .widget-title, #bbpress-forums li.bbp-header,
+.bevelled, .widget-title, .entry-content, #bbpress-forums li.bbp-header,
 #bbpress-forums li.bbp-footer {
   background-color: #1d1d1d;
   border: 1px solid #000;
@@ -8958,7 +8958,7 @@ div {
   border-top: 0;
   min-height: 500px; }
 
-.content-test, .avatar-block {
+.content-test, .avatar-block, .entry-content {
   background: #212528;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
@@ -9062,6 +9062,9 @@ li:hover {
   .navbar .btn, .navbar .wpcf7 input[type=submit], .wpcf7 .navbar input[type=submit] {
     padding: 0; }
 
+.wp-post-image {
+  width: 100%; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
@@ -9105,33 +9108,12 @@ li:hover {
   font-size: 12px;
   padding: 20px; }
 
-#bbpress-forums div.even,
-#bbpress-forums ul.even {
-  background-color: #fff; }
-
-#bbpress-forums div.odd,
-#bbpress-forums ul.odd {
-  background-color: #fbfbfb; }
-
 body.reply-edit .reply {
   float: none; }
 
 #bbpress-forums div.reply {
   height: auto;
   width: 100%; }
-
-#bbpress-forums div.bbp-forum-header,
-#bbpress-forums div.bbp-topic-header,
-#bbpress-forums div.bbp-reply-header {
-  background-color: #f4f4f4; }
-
-#bbpress-forums .status-trash.even,
-#bbpress-forums .status-spam.even {
-  background-color: #fee; }
-
-#bbpress-forums .status-trash.odd,
-#bbpress-forums .status-spam.odd {
-  background-color: #fdd; }
 
 #bbpress-forums .status-closed,
 #bbpress-forums .status-closed a {
