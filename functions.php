@@ -81,3 +81,22 @@ function remove_admin_bar() {
 }
 
 // show_admin_bar(false);
+
+// post view counts
+function count_post_views() {
+	if (is_single()) {
+		global $post;
+		$post_id = $post->ID;
+		$count = 1;
+		$post_view_count = get_post_meta($post_id, 'views_count', true);
+		if ($post_view_count) {
+			$count = $post_view_count + 1;
+		}
+
+		update_post_meta($post_id, 'views_count', $count);
+	}
+}
+
+add_action('wp_head', 'count_post_views');
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+

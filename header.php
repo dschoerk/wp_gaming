@@ -24,6 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 	<link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" type="text/css" media="screen" />
 
@@ -32,152 +33,194 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body id="body" <?php body_class(); ?> >
 
-	<div class="container" id="page" style="background-color: rgba(0,0,0,0); padding: 0;">
 
-		<!-- ******************* The Navbar Area ******************* -->
+	<nav class="navbar navbar-toggleable-md navbar-inverse navbar-custom navbar-absolute">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+		<!-- <?php wp_nav_menu(
+			array(
+				'theme_location'  => 'primary',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'navbarNavDropdown',
+				'menu_class'      => 'navbar-nav',
+				'fallback_cb'     => '',
+				'menu_id'         => 'main-menu',
+				'walker'          => new WP_Bootstrap_Navwalker(),
+			)
+		); ?> -->
 
-		<div class="container" style="height: 32px; background-color: rgba(0,0,0,0);background: rgb(0, 0, 0) transparent;">
-			
-		</div>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="/" id="nav-home" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-text">Home</span>
+              <span class="nav-image icon-home hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
 
-		<div class="container bevelled d-flex flex-row align-items-center header">
-
-			<div style="position: absolute; left: 50%">
-				<img class="banner" src="<?php echo(bloginfo('template_directory') . '/img/logo.png') ?>"/>
-			</div>
-
-			<div class="heading1 logo mr-auto col" style="color: white" style="flex-grow: 1;">
-				Gaming<br>Community
-			</div>
-
-			<!-- User -->
-
-			<?php global $current_user;
-				wp_get_current_user();
-
-				/*echo 'Username: ' . $current_user->user_login . "\n";
-				echo 'User email: ' . $current_user->user_email . "\n";
-				echo 'User level: ' . $current_user->user_level . "\n";
-				echo 'User first name: ' . $current_user->user_firstname . "\n";
-				echo 'User last name: ' . $current_user->user_lastname . "\n";
-				echo 'User display name: ' . $current_user->display_name . "\n";
-				echo 'User ID: ' . $current_user->ID . "\n";*/
-			?>
-
-			<?php if($current_user->ID != 0) { ?>
-				<div class="col-md-2">
-					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-						<i class="fa fa-pencil-square-o"></i>
+          <li class="nav-item dropdown">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="/" id="nav-server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-text">Server</span>
+              <span class="nav-image icon-server hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="#" id="nav-chat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-text">Chatlog</span>
+              <span class="nav-image icon-chat hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="#" id="nav-bans" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-text">Banlist</span>
+              <span class="nav-image icon-ban hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item clanlogo hidden-md-down">
+            <a class="nav-link" href="/"><img src="<?php echo(bloginfo('template_directory') . '/img/logo.png') ?>"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="/search" id="nav-search">
+              <span class="nav-text">Search</span>
+              <span class="nav-image icon-player hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-hover">
+              <a class="nav-link dropdown-toggle" href="/admins" id="nav-admins">
+              <span class="nav-text">Adminlist</span>
+              <span class="nav-image icon-admin hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-hover">
+              <a class="nav-link" href="https://3xp-clan.com" target="_blank" id="nav-clanpage">
+              <span class="nav-text">Clanpage</span>
+              <span class="nav-image icon-clanpage hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-hover">
+              <a class="nav-link" href="https://board.3xp-clan.com" target="_blank" id="nav-forum">
+              <span class="nav-text">Forum</span>
+              <span class="nav-image icon-board hidden-md-down"></span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+	
+	<div class="header-background">
+      <div class="img">
+      </div>
+      	
+		<div class="userbuttons container">
+			<div class="row" style="float: right;">
+				<!-- <div class="btn-div">
+					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+						<i class="fa fa-pencil-square-o"></i> Login
 					</button>
+					
+					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+						<i class="fa fa-pencil-square-o"></i> Register
+					</button> -->
 
-					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px">
-						<i class="fa fa-cog"></i>
-					</button>
+					<?php global $current_user;
+						wp_get_current_user();
 
-					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px">
-						<i class="fa fa-envelope"></i>
-					</button>
-				</div>
-				
-				
-				<div class="col-md-2">
-					<div>
-						<div class="bevelled d-flex flex-row post">
-							<img src="<?php $img = get_avatar_url($current_user->ID); if($img) { echo($img); } else { echo(""); } ?>" style="margin-left: 25px; width: 64px; height: 64px">
-							<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
-								<div>
-									<span class="author"><?php echo($current_user->display_name) ?></span>
-									<span class="rank"><?php echo($current_user->user_level) ?></span>
+						/*echo 'Username: ' . $current_user->user_login . "\n";
+						echo 'User email: ' . $current_user->user_email . "\n";
+						echo 'User level: ' . $current_user->user_level . "\n";
+						echo 'User first name: ' . $current_user->user_firstname . "\n";
+						echo 'User last name: ' . $current_user->user_lastname . "\n";
+						echo 'User display name: ' . $current_user->display_name . "\n";
+						echo 'User ID: ' . $current_user->ID . "\n";*/
+					?>
+
+					<?php if($current_user->ID != 0) { ?>
+						<!-- <div class="col-md-2">
+							<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+								<i class="fa fa-pencil-square-o"></i>
+							</button>
+
+							<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px">
+								<i class="fa fa-cog"></i>
+							</button>
+
+							<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search" style="width: 45px; height: 45px">
+								<i class="fa fa-envelope"></i>
+							</button>
+						</div> -->
+						
+						
+						<div>
+							<div class=" d-flex flex-row post">
+								<img src="<?php $img = get_avatar_url($current_user->ID); if($img) { echo($img); } else { echo(""); } ?>" style="margin-left: 25px; width: 64px; height: 64px">
+								<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
+									<div>
+										<span class="author"><?php echo($current_user->display_name) ?></span>
+										<span class="rank"><?php echo($current_user->user_level) ?></span>
+									</div>
 								</div>
 							</div>
 						</div>
+
+					<?php } else { ?>
+						<div class="d-flex flex-column">
+							<a href="<?php echo wp_registration_url(); ?>" class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+								<i class="fa fa-pencil-square-o"></i> Register
+							</a>
 						
-					</div>
+							<a class="submit btn btn-primary login-btn" id="searchsubmit" name="submit" type="submit" value="Search" data-toggle="modal" href="#myModal">
+								<i class="fa fa-lock"></i> Sign In
+							</a>
+
+							<div class="modal hide login-form" id="myModal">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">x</button>
+									<h3>Login to www.d43.ovh</h3>
+								</div>
+								<div class="modal-body">
+									<?php wp_login_form( ); ?>
+								</div>
+								<div class="modal-footer">
+									New To d43.ovh?
+									<a href="#" class="btn btn-primary" style="margin-left: 20px;">Register</a>
+								</div>
+							</div>
+
+							<div class="signin-form">
+									<?php wp_login_form( ); ?>
+							</div>
+
+						</div>
+					<?php } ?>
 				</div>
-			<?php } else { ?>
-				<div class="d-flex flex-column" style="margin-right: 30px">
-					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
-						<i class="fa fa-pencil-square-o"></i> Register
-					</button>
-				
-					<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
-						<i class="fa fa-lock"></i> Sign In
-					</button>
-				</div>
-			<?php } ?>
-		
+			</div> 
 		</div>
 
-		<div class="container bevelled wrapper-navbar" id="wrapper-navbar">
-		
-		<!-- <a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content','understrap' ); ?></a> -->
+        
 
-		<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse">
-			<div class="container" style="padding: 0">
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+      <div class="spacer">
+      </div>
+    </div>
 
-					<!-- Your site title as branding in the menu -->
-					<!-- <?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> <?php bloginfo( 'name' ); ?></a></h1>
-							
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">  <?php bloginfo( 'name' ); ?></a>
-						
-						<?php endif; ?>
-						
-					
-					<?php } else {
-						the_custom_logo();
-					} ?> -->
-					
-					<!-- end custom logo -->
-
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav svm-menu-item',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'walker'          => new WP_Bootstrap_Navwalker(),
-					)
-				); ?>
-
-				<!-- search -->
-				<form style="width: 100%; max-width: 320px" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-					<div class="input-group">
-						<input class="field form-control" id="s" name="s" type="text"
-							placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>">
-						<span class="input-group-btn">
-							<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
-							value="<?php esc_attr_e( 'Search', 'understrap' ); ?>">
-						</span>
-					</div>
-				</form>
-
-			</div><!-- .container -->
-
-		</nav><!-- .site-navigation -->
-
-	</div><!-- .wrapper-navbar end -->
-
-	<!--  -->
-
-	<script>
-	$(function () {
-		// $('[data-toggle="tooltip"]').tooltip();
-
-		$("body").toggleClass("no-blur");
-	});
-	</script>
 
 </body>
