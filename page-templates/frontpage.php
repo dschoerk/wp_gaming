@@ -24,35 +24,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row">
 
 					<div class="col-md-6">
+
+					<?php
 						
-						<div class="bevelled">
-							<div class="gradient-text" style="font-size: 35px; font-family: Montserrat, sans-serif; text-align: center; margin-top: 10px;  margin-bottom: 10px; ">Welcome to D43 Gaming!</div>	
-						</div>
+						while ( have_posts() ) : the_post();
+							get_template_part( 'loop-templates/content', 'empty' );
+						endwhile;
 
-						<div class="bevelled" style="margin-top: 10px; padding: 20px; text-align: center">
-
-							<a href="http://www.gametracker.com/server_info/d43.ovh:28960/" target="_blank">
-								<img src="http://cache.gametracker.com/server_info/d43.ovh:28960/b_560_95_1.png" border="0" width="560" height="95" alt=""/>
-							</a>
-							
-							<div style="height: 10px"></div>
-
-							<a href="http://www.gametracker.com/server_info/d43.ovh:28860/" target="_blank">
-								<img src="http://cache.gametracker.com/server_info/d43.ovh:28860/b_560_95_1.png" border="0" width="560" height="95" alt=""/>
-							</a>
-
-							<div style="height: 10px"></div>
-
-							<a href="http://www.gametracker.com/server_info/d43.ovh:28972/" target="_blank">
-								<img src="http://cache.gametracker.com/server_info/d43.ovh:28972/b_560_95_1.png" border="0" width="560" height="95" alt=""/>
-							</a>	
-
-							<div style="height: 10px"></div>
-
-							<a href="http://www.gametracker.com/server_info/d43.ovh:28965/" target="_blank">
-								<img src="http://cache.gametracker.com/server_info/d43.ovh:28965/b_560_95_1.png" border="0" width="560" height="95" alt=""/>
-							</a>
-						</div>
+						
+					?>
 
 					</div>
 

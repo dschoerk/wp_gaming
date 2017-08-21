@@ -10,7 +10,7 @@
 ?>
 
 <div id="bbpress-forums">
-asdfasdf
+	
 	<?php bbp_breadcrumb(); ?>
 
 	<?php do_action( 'bbp_template_before_single_topic' ); ?>
@@ -34,7 +34,7 @@ asdfasdf
 		<?php if ( bbp_has_replies() ) : ?>
 
 			<?php bbp_get_template_part( 'pagination', 'replies' ); ?>
-
+			
 			<?php bbp_get_template_part( 'loop',       'replies' ); ?>
 
 			<?php bbp_get_template_part( 'pagination', 'replies' ); ?>

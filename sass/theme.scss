@@ -11,6 +11,8 @@
 @import "assets/underscores"; // <------- Underscores media styles
 
 // Any additional imported files //
+
+@import "theme/serverlist";
 @import "theme/theme";  // <--------- Thats where you can add your own design. Thats your part!
 @import "theme/contact-form7"; // contact form 7 - Bootatrap 4 support
 
@@ -27,3 +29,4 @@
     position: relative;
     padding: 30px 30px 30px 20px !important;
 }
+

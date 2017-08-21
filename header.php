@@ -49,9 +49,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 				'menu_id'         => 'main-menu',
 				'walker'          => new WP_Bootstrap_Navwalker(),
 			)
-		); ?> -->
+		); ?>
 
-	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<div class="nav-item clanlogo hidden-md-down">
+			<a class="nav-link" href="/"><img src="<?php echo(bloginfo('template_directory') . '/img/logo.png') ?>"></a>
+		</div> -->
+
+		<?php wp_nav_menu(
+			array(
+				'theme_location'  => 'primary',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'navbarNavDropdown',
+				'menu_class'      => 'navbar-nav',
+				'fallback_cb'     => '',
+				'menu_id'         => 'main-menu',
+				'walker'          => new WP_Bootstrap_Navwalker(),
+			)
+		); ?>
+
+	  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <div class="nav-hover">
@@ -86,10 +102,12 @@ $container = get_theme_mod( 'understrap_container_type' );
               </a>
             </div>
           </li>
+
           <li class="nav-item clanlogo hidden-md-down">
             <a class="nav-link" href="/"><img src="<?php echo(bloginfo('template_directory') . '/img/logo.png') ?>"></a>
           </li>
-          <li class="nav-item dropdown">
+          
+					<li class="nav-item dropdown">
             <div class="nav-hover">
               <a class="nav-link dropdown-toggle" href="/search" id="nav-search">
               <span class="nav-text">Search</span>
@@ -107,7 +125,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           </li>
           <li class="nav-item">
             <div class="nav-hover">
-              <a class="nav-link" href="https://3xp-clan.com" target="_blank" id="nav-clanpage">
+              <a class="nav-link" href="https://d43.ovh" target="_blank" id="nav-clanpage">
               <span class="nav-text">Clanpage</span>
               <span class="nav-image icon-clanpage hidden-md-down"></span>
               </a>
@@ -115,14 +133,14 @@ $container = get_theme_mod( 'understrap_container_type' );
           </li>
           <li class="nav-item">
             <div class="nav-hover">
-              <a class="nav-link" href="https://board.3xp-clan.com" target="_blank" id="nav-forum">
+              <a class="nav-link" href="https://d43.ovh" target="_blank" id="nav-forum">
               <span class="nav-text">Forum</span>
               <span class="nav-image icon-board hidden-md-down"></span>
               </a>
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
     </nav>
     
 	
@@ -170,19 +188,56 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						
 						<div>
-							<div class=" d-flex flex-row post">
-								<img src="<?php $img = get_avatar_url($current_user->ID); if($img) { echo($img); } else { echo(""); } ?>" style="margin-left: 25px; width: 64px; height: 64px">
+							<!-- <div class=" d-flex flex-row post">
+								
 								<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
 									<div>
 										<span class="author"><?php echo($current_user->display_name) ?></span>
 										<span class="rank"><?php echo($current_user->user_level) ?></span>
 									</div>
 								</div>
+							</div> -->
+
+							<div class="bevelled dropdown" style="display: inline-block; padding-left: 10px; padding-right: 10px; line-height: 50px; height: 50px">
+								<a href="<?php echo(bp_loggedin_user_domain() . bp_get_messages_slug()); ?>">
+									<i class="fa fa-envelope fa-border badge">
+										<?php $unreadMsg = messages_get_unread_count( bp_loggedin_user_id()); if($unreadMsg > 0):?>
+											<span class="count"><?php echo($unreadMsg);?></span>
+										<?php endif ?>
+									</i>
+								</a>
+
+								<a href="<?php echo(bp_loggedin_user_domain() . bp_get_notifications_slug()); ?>">
+									<i class="fa fa-bell fa-border badge">
+										<?php $unreadNotifications = bp_notifications_get_unread_notification_count( bp_loggedin_user_id()); if($unreadNotifications > 0):?>
+											<span class="count"><?php echo($unreadNotifications);?></span>
+										<?php endif ?>
+									</i>
+								</a>
 							</div>
+
+							<div class="dropdown" style="display: inline-block; vertical-align: top">
+								<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+									<img src="<?php $img = get_avatar_url($current_user->ID); if($img) { echo($img); } else { echo(""); } ?>" style="margin-left: 25px; width: 32px; height: 32px">
+									<?php echo($current_user->display_name) ?>
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="<?php echo(bp_loggedin_user_domain()); ?>">Profile</a></li>
+									<li><a href="<?php echo(bp_loggedin_user_domain() . bp_get_messages_slug()); ?>">Messages</a></li>
+									<li><a href="<?php echo(bp_loggedin_user_domain() . '/notifications/'); ?>">Notifications</a></li>
+									<li><a href="<?php echo(bp_loggedin_user_domain() . '/profile/change-avatar/'); ?>">Change Avatar</a></li>
+									<li><a href="<?php echo wp_logout_url(); ?>">Log Out</a></li>
+								</ul>
+							</div>
+
+							
 						</div>
 
+
+
 					<?php } else { ?>
-						<div class="d-flex flex-column">
+						<div class="">
 							<a href="<?php echo wp_registration_url(); ?>" class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
 								<i class="fa fa-pencil-square-o"></i> Register
 							</a>

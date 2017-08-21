@@ -63,6 +63,8 @@
 				//$show_sep  = $total_subs > $i ? ',' : '';
 				$permalink = bbp_get_forum_permalink( $sub_forum->ID );
 				$title     = bbp_get_forum_title( $sub_forum->ID );
+				$description = bbp_get_forum_content( $sub_forum->ID );
+				$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $sub_forum->ID ), 'large' )[0];
 
 				// Show topic count
 				/*if ( !bbp_is_forum_category( $sub_forum->ID ) ) {
@@ -76,16 +78,26 @@
 
 				$lastActiveTopic = bbp_get_forum_last_active_id( $sub_forum->ID );
 				$lastActiveTopicTitle = bbp_get_forum_title( $lastActiveTopic );
+				//$lastActiveTopicLink = ;//bbp_get_forum_permalink( $lastActiveTopic );
 				$lastActiveTopicAuthorID = bbp_get_topic_author_id( $lastActiveTopic );
 				$lastActiveTopicAuthor = get_user_by( 'ID', $lastActiveTopicAuthorID );
+				
 
 				?>
 					<div class="row bbp-single-forum">
-						<div class="col-md-5">
-							<div class="title"><a href="<?php echo($permalink); ?>"><?php echo($title); ?></a></div>
-							
-							<!-- show subforums -->
-							<?php bbp_list_forums(array('forum_id' => 0)); ?>
+						<div class="col-md-6">
+
+							<div class="d-flex flex-row">
+								<div class="thumbnail" style="background-image: url('<?php echo($thumbnail); ?>'); margin-left: 25px"></div>
+
+								<div>
+									<div class="title"><a href="<?php echo($permalink); ?>"><?php echo($title); ?></a></div>
+									
+									<!-- show subforums -->
+									<?php bbp_list_forums(array('forum_id' => $sub_forum->ID)); ?>
+									<div class="description"><?php echo($description); ?></div>
+								</div>
+							</div>
 
 						</div>
 						<div class="col-md-1" style="text-align: center">
@@ -96,15 +108,30 @@
 								Posts
 							</div>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-1" style="text-align: center">
+							<div class="postcount">
+								<?php echo(bbp_get_forum_reply_count( $sub_forum->ID )); ?>
+							</div>
+							<div>
+								Replies
+							</div>
+						</div>
+						<div class="col-md-4">
 							<div class="d-flex flex-row">
-								<img src="http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png" style="margin-left: 25px">
-								<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
-									<div class="title">Koalas are bae</div>
+								<!-- <div class="thumbnail" style="background-image: url('http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png'); margin-left: 25px"></div> -->
+								<div style="width: 48px; height: 48px">
+									<?php echo bbp_get_topic_author_link( array( 'post_id' => $lastActiveTopic,"type" => "avatar", "size" => 48 ) ); ?>
+								</div>
+								<div style="margin-left: 10px">
+									<div class="title"><a href="<?php bbp_forum_last_reply_url( $sub_forum->ID ) ?>"><?php echo($lastActiveTopicTitle); ?></a></div>
 									<div>
-										<span class="author"><?php echo($lastActiveTopicAuthor->displayname); ?></span>
-										<span class="date"><span class="fa fa-calendar"></span> 01.01.1970</span>
+										<span class="author"><?php echo($lastActiveTopicAuthor->display_name); ?></span>, 
+										<span>
+											<?php bbp_forum_freshness_link ( $sub_forum->ID ); ?>
+										</span>
+										<!-- <span class="date"><span class="fa fa-calendar"></span> 01.01.1970</span> -->
 									</div>
+									
 								</div>
 							</div>
 							<!-- <div style="width: 32px;">
