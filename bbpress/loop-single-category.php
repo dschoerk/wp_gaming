@@ -84,8 +84,8 @@
 				
 
 				?>
-					<div class="row bbp-single-forum">
-						<div class="col-md-6">
+					<div class="bbp-single-forum d-flex flex-row align-items-left">
+						<div style="flex-grow: 2; width: 250px">
 
 							<div class="d-flex flex-row">
 								<div class="thumbnail" style="background-image: url('<?php echo($thumbnail); ?>'); margin-left: 25px"></div>
@@ -100,7 +100,7 @@
 							</div>
 
 						</div>
-						<div class="col-md-1" style="text-align: center">
+						<div style="text-align: center; flex-grow: 1;">
 							<div class="postcount">
 								<?php echo(bbp_get_forum_topic_count( $sub_forum->ID )); ?>
 							</div>
@@ -108,7 +108,7 @@
 								Posts
 							</div>
 						</div>
-						<div class="col-md-1" style="text-align: center">
+						<div style="text-align: center; flex-grow: 1;">
 							<div class="postcount">
 								<?php echo(bbp_get_forum_reply_count( $sub_forum->ID )); ?>
 							</div>
@@ -116,13 +116,13 @@
 								Replies
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="d-flex flex-row">
+						<div style="flex-grow: 4">
+							<div class="d-flex flex-row align-items-center">
 								<!-- <div class="thumbnail" style="background-image: url('http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png'); margin-left: 25px"></div> -->
-								<div style="width: 48px; height: 48px">
+								<div style="width: 48px; height: 48px; flex-grow: 0;">
 									<?php echo bbp_get_topic_author_link( array( 'post_id' => $lastActiveTopic,"type" => "avatar", "size" => 48 ) ); ?>
 								</div>
-								<div style="margin-left: 10px">
+								<div style="margin-left: 10px; flex-grow: 1; width: 0;">
 									<div class="title"><a href="<?php bbp_forum_last_reply_url( $sub_forum->ID ) ?>"><?php echo($lastActiveTopicTitle); ?></a></div>
 									<div>
 										<span class="author"><?php echo($lastActiveTopicAuthor->display_name); ?></span>, 

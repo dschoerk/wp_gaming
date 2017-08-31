@@ -6,6 +6,7 @@
  *
  * @package understrap
  */
+ 
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -238,15 +239,98 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php } else { ?>
 						<div class="">
-							<a href="<?php echo wp_registration_url(); ?>" class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
+							<!-- <a href="<?php echo wp_registration_url(); ?>" class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="Search">
 								<i class="fa fa-pencil-square-o"></i> Register
-							</a>
+							</a> -->
 						
 							<a class="submit btn btn-primary login-btn" id="searchsubmit" name="submit" type="submit" value="Search" data-toggle="modal" href="#myModal">
-								<i class="fa fa-lock"></i> Sign In
+								<i class="fa fa-lock"></i> Sign In / Register
 							</a>
 
 							<div class="modal hide login-form" id="myModal">
+								<div class="form">
+									<div style="width:100%; text-align:center;">
+										<img src="https://d43.ovh/wordpress/wp-content/themes/d43_theme/img/logo.png" alt="D34" class="logo">
+									</div>
+									<div id="steam">
+										<a href="https://d43.ovh/steam/login">
+											<img class="bottom" src="https://image.ibb.co/fUkCHQ/steam_button_hover.png">
+											<img class="top" src="https://image.ibb.co/c22RcQ/steam_button.png" />
+										</a>
+									</div>
+									<ul class="tab-group">
+										<li class="tab active"><a href="#signup">Sign Up</a></li>
+										<li class="tab"><a href="#login">Log In</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="signup">
+											<!-- <h1>Register</h1> -->
+											<form action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
+												<div class="field-wrap">
+													<label>
+													Email Address<span class="req">*</span>
+													</label>
+													<input type="email" id="user_login" name="user_login" required autocomplete="off" />
+												</div>
+												<div class="field-wrap">
+													<label>
+														Set A Password<span class="req">*</span>
+													</label>
+													<input type="password" id="user_email" name="user_email" required autocomplete="off" />
+												</div>
+												<!-- <div class="field-wrap">
+													<label>
+														Repeat Password<span class="req">*</span>
+													</label>
+													<input type="password" required autocomplete="off" />
+												</div> -->
+												
+												<div class="login_fields">
+													<?php do_action('register_form'); ?>
+													<input type="submit" name="user-submit" value="<?php _e('Sign up!'); ?>" class="button button-block" />
+													<?php $register = $_GET['register']; if($register == true) { echo '<p>Check your email for the password!</p>'; } ?>
+													<input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>?register=true" />
+													<input type="hidden" name="user-cookie" value="1" />
+												</div>
+											</form>
+										</div>
+										<div id="login">
+											<!-- <h1>Welcome Back!</h1> -->
+											<form id="" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+												<div class="field-wrap">
+													<label for="user_login"></label>
+														Username <span class="req">*</span>
+													</label>
+													<input type="text" name="log" value="<?php echo esc_attr(stripslashes($user_login)); ?>" id="user_login" required autocomplete="off" />
+												</div>
+												<div class="field-wrap">
+													<label>
+													Password<span class="req">*</span>
+													</label>
+													<input type="password" name="pwd" value="" id="user_pass" required autocomplete="off" />
+												</div>
+
+												<div class="login_fields">
+
+												<p class="forgot"><a href="<?php echo wp_lostpassword_url(); ?>">Forgot Password?</a></p>
+													<p class="forgot">
+														<label for="rememberme">
+															<input type="checkbox" name="rememberme" value="forever" checked="checked" id="rememberme" tabindex="13" /> Remember me
+														</label>
+													</p>
+
+													<?php do_action('login_form'); ?>
+													<input type="submit" name="user-submit" value="Log In" tabindex="14" class="button button-block" />
+													<input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>" />
+													<input type="hidden" name="user-cookie" value="1" />
+												</div>
+											</form>
+										</div>
+									</div>
+									<!-- tab-content -->
+								</div>
+
+								<!-- asdf
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal">x</button>
 									<h3>Login to www.d43.ovh</h3>
@@ -257,7 +341,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<div class="modal-footer">
 									New To d43.ovh?
 									<a href="#" class="btn btn-primary" style="margin-left: 20px;">Register</a>
-								</div>
+								</div> -->
 							</div>
 
 							<div class="signin-form">
@@ -278,4 +362,49 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
 
 
+		<script>
+			$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+			var $this = $(this),
+					label = $this.prev('label');
+
+				if (e.type === 'keyup') {
+					if ($this.val() === '') {
+							label.removeClass('active highlight');
+						} else {
+							label.addClass('active highlight');
+						}
+				} else if (e.type === 'blur') {
+					if( $this.val() === '' ) {
+						label.removeClass('active highlight'); 
+					} else {
+						label.removeClass('highlight');   
+					}   
+				} else if (e.type === 'focus') {
+					
+					if( $this.val() === '' ) {
+						label.removeClass('highlight'); 
+					} 
+					else if( $this.val() !== '' ) {
+						label.addClass('highlight');
+					}
+				}
+
+		});
+
+		$('.tab a').on('click', function (e) {
+			
+			e.preventDefault();
+			
+			$(this).parent().addClass('active');
+			$(this).parent().siblings().removeClass('active');
+			
+			target = $(this).attr('href');
+
+			$('.tab-content > div').not(target).hide();
+			
+			$(target).fadeIn(600);
+			
+		});
+	</script>
 </body>

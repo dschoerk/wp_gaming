@@ -1691,8 +1691,7 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > select.form-control-static,
   .wpcf7 .input-group-sm > textarea.form-control-static, .wpcf7 .input-group-sm > .form-control-static.wpcf7-validation-errors,
   .input-group-sm > .form-control-static.input-group-addon,
-  .input-group-sm > .input-group-btn > .form-control-static.btn, .header-background .login-form
-  .input-group-sm > .login-submit.input-group-btn > input.form-control-static, .wpcf7
+  .input-group-sm > .input-group-btn > .form-control-static.btn, .wpcf7
   .input-group-sm > .input-group-btn > input.form-control-static[type=submit], .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
   .wpcf7 .input-group-lg > input.form-control-static[type=search],
   .wpcf7 .input-group-lg > input.form-control-static[type=url],
@@ -1712,8 +1711,7 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > select.form-control-static,
   .wpcf7 .input-group-lg > textarea.form-control-static, .wpcf7 .input-group-lg > .form-control-static.wpcf7-validation-errors,
   .input-group-lg > .form-control-static.input-group-addon,
-  .input-group-lg > .input-group-btn > .form-control-static.btn, .header-background .login-form
-  .input-group-lg > .login-submit.input-group-btn > input.form-control-static, .wpcf7
+  .input-group-lg > .input-group-btn > .form-control-static.btn, .wpcf7
   .input-group-lg > .input-group-btn > input.form-control-static[type=submit] {
     padding-right: 0;
     padding-left: 0; }
@@ -1737,8 +1735,7 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > select,
 .wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn, .header-background .login-form
-.input-group-sm > .login-submit.input-group-btn > input, .wpcf7
+.input-group-sm > .input-group-btn > .btn, .wpcf7
 .input-group-sm > .input-group-btn > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem; }
@@ -1768,8 +1765,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > select,
 .wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn, .header-background .login-form
-.input-group-lg > .login-submit.input-group-btn > input, .wpcf7
+.input-group-lg > .input-group-btn > .btn, .wpcf7
 .input-group-lg > .input-group-btn > input[type=submit] {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem; }
@@ -2071,7 +2067,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .header-background .login-form .login-submit > input, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit] {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2083,37 +2079,36 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.5rem 1rem;
   font-size: 1rem;
   transition: all 0.2s ease-in-out; }
-  .btn:focus, .header-background .login-form .login-submit > input:focus, .wpcf7 input[type=submit]:focus, .btn:hover, .header-background .login-form .login-submit > input:hover, .wpcf7 input[type=submit]:hover {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .btn:hover, .wpcf7 input[type=submit]:hover {
     text-decoration: none; }
-  .btn:focus, .header-background .login-form .login-submit > input:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .header-background .login-form .login-submit > input.focus, .wpcf7 input.focus[type=submit] {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(37, 194, 245, 0.25); }
-  .btn.disabled, .header-background .login-form .login-submit > input.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .header-background .login-form .login-submit > input:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
     cursor: not-allowed;
     opacity: .65; }
-  .btn:active, .header-background .login-form .login-submit > input:active, .wpcf7 input[type=submit]:active, .btn.active, .header-background .login-form .login-submit > input.active, .wpcf7 input.active[type=submit] {
+  .btn:active, .wpcf7 input[type=submit]:active, .btn.active, .wpcf7 input.active[type=submit] {
     background-image: none; }
 
 a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none; }
 
-.btn-primary, .header-background .login-form .login-submit > input {
+.btn-primary {
   color: #fff;
   background-color: #25c2f5;
   border-color: #25c2f5; }
-  .btn-primary:hover, .header-background .login-form .login-submit > input:hover {
+  .btn-primary:hover {
     color: #fff;
     background-color: #0aa9dd;
     border-color: #0aa2d3; }
-  .btn-primary:focus, .header-background .login-form .login-submit > input:focus, .btn-primary.focus, .header-background .login-form .login-submit > input.focus {
+  .btn-primary:focus, .btn-primary.focus {
     box-shadow: 0 0 0 2px rgba(37, 194, 245, 0.5); }
-  .btn-primary.disabled, .header-background .login-form .login-submit > input.disabled, .btn-primary:disabled, .header-background .login-form .login-submit > input:disabled {
+  .btn-primary.disabled, .btn-primary:disabled {
     background-color: #25c2f5;
     border-color: #25c2f5; }
-  .btn-primary:active, .header-background .login-form .login-submit > input:active, .btn-primary.active, .header-background .login-form .login-submit > input.active,
-  .show > .btn-primary.dropdown-toggle, .header-background .login-form
-  .login-submit.show > input.dropdown-toggle {
+  .btn-primary:active, .btn-primary.active,
+  .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #0aa9dd;
     background-image: none;
@@ -2359,11 +2354,11 @@ fieldset[disabled] a.btn {
     .btn-link:disabled:focus, .btn-link:disabled:hover {
       text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .header-background .login-form .login-submit.btn-group-lg > input, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem; }
 
-.btn-sm, .btn-group-sm > .btn, .header-background .login-form .login-submit.btn-group-sm > input, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem; }
 
@@ -2512,64 +2507,42 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .header-background .login-form .login-submit.btn-group > input, .wpcf7 .btn-group > input[type=submit],
-  .btn-group-vertical > .btn, .header-background .login-form
-  .login-submit.btn-group-vertical > input, .wpcf7
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+  .btn-group-vertical > .btn, .wpcf7
   .btn-group-vertical > input[type=submit] {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .header-background .login-form .login-submit.btn-group > input:hover, .wpcf7 .btn-group > input[type=submit]:hover,
-    .btn-group-vertical > .btn:hover, .header-background .login-form
-    .login-submit.btn-group-vertical > input:hover, .wpcf7
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+    .btn-group-vertical > .btn:hover, .wpcf7
     .btn-group-vertical > input[type=submit]:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .header-background .login-form .login-submit.btn-group > input:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .header-background .login-form .login-submit.btn-group > input:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .header-background .login-form .login-submit.btn-group > input.active, .wpcf7 .btn-group > input.active[type=submit],
-    .btn-group-vertical > .btn:focus, .header-background .login-form
-    .login-submit.btn-group-vertical > input:focus, .wpcf7
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+    .btn-group-vertical > .btn:focus, .wpcf7
     .btn-group-vertical > input[type=submit]:focus,
-    .btn-group-vertical > .btn:active, .header-background .login-form
-    .login-submit.btn-group-vertical > input:active, .wpcf7
+    .btn-group-vertical > .btn:active, .wpcf7
     .btn-group-vertical > input[type=submit]:active,
-    .btn-group-vertical > .btn.active, .header-background .login-form
-    .login-submit.btn-group-vertical > input.active, .wpcf7
+    .btn-group-vertical > .btn.active, .wpcf7
     .btn-group-vertical > input.active[type=submit] {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .header-background .login-form .login-submit > input + .btn, .header-background .login-form .btn-group .login-submit > input + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .header-background .login-form .login-submit > .btn + input, .header-background .login-form .btn-group .login-submit > .btn + input, .btn-group .header-background .login-form .login-submit > input + input, .header-background .login-form .btn-group .login-submit > input + input, .header-background .login-form .btn-group .wpcf7 .login-submit > input[type=submit] + input, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .header-background .login-form .wpcf7 .login-submit > input + input[type=submit], .header-background .login-form .btn-group .wpcf7 .login-submit > input + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
   .btn-group .btn + .btn-group,
-  .btn-group .header-background .login-form .login-submit > input + .btn-group, .header-background .login-form
-  .btn-group .login-submit > input + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
   .btn-group .btn-group + .btn,
-  .btn-group .header-background .login-form .login-submit > .btn-group + input, .header-background .login-form
-  .btn-group .login-submit > .btn-group + input,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
-  .btn-group-vertical .header-background .login-form .login-submit > input + .btn, .header-background .login-form
-  .btn-group-vertical .login-submit > input + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
-  .btn-group-vertical .header-background .login-form .login-submit > .btn + input, .header-background .login-form
-  .btn-group-vertical .login-submit > .btn + input,
-  .btn-group-vertical .header-background .login-form .login-submit > input + input, .header-background .login-form
-  .btn-group-vertical .login-submit > input + input, .header-background .login-form
-  .btn-group-vertical .wpcf7 .login-submit > input[type=submit] + input,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
-  .btn-group-vertical .header-background .login-form .wpcf7 .login-submit > input + input[type=submit], .header-background .login-form
-  .btn-group-vertical .wpcf7 .login-submit > input + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
   .btn-group-vertical .btn + .btn-group,
-  .btn-group-vertical .header-background .login-form .login-submit > input + .btn-group, .header-background .login-form
-  .btn-group-vertical .login-submit > input + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
   .btn-group-vertical .btn-group + .btn,
-  .btn-group-vertical .header-background .login-form .login-submit > .btn-group + input, .header-background .login-form
-  .btn-group-vertical .login-submit > .btn-group + input,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
   .btn-group-vertical .btn-group + .btn-group {
@@ -2581,33 +2554,33 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .header-background .login-form .login-submit.btn-group > input:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .header-background .login-form .login-submit.btn-group > input:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
   margin-left: 0; }
 
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .header-background .login-form .btn-group > .login-submit.btn-group:not(:first-child):not(:last-child) > input, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
   border-radius: 0; }
 
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .header-background .login-form .login-submit > input + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .header-background .login-form .login-submit > input + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .header-background .login-form .login-submit.btn-group-sm > input + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .header-background .login-form .login-submit.btn-group-lg > input + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -2616,35 +2589,30 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .header-background .login-form .login-submit > input, .header-background .login-form .btn-group-vertical .login-submit > input, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .header-background .login-form .login-submit.btn-group-vertical > input + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .header-background .login-form .login-submit.btn-group-vertical > .btn + input, .header-background .login-form .login-submit.btn-group-vertical > input + input, .header-background .login-form .wpcf7 .login-submit.btn-group-vertical > input[type=submit] + input, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .header-background .login-form .wpcf7 .login-submit.btn-group-vertical > input + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
-  .btn-group-vertical > .btn + .btn-group, .header-background .login-form
-  .login-submit.btn-group-vertical > input + .btn-group, .wpcf7
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
+  .btn-group-vertical > .btn + .btn-group, .wpcf7
   .btn-group-vertical > input[type=submit] + .btn-group,
-  .btn-group-vertical > .btn-group + .btn, .header-background .login-form
-  .login-submit.btn-group-vertical > .btn-group + input, .wpcf7
+  .btn-group-vertical > .btn-group + .btn, .wpcf7
   .btn-group-vertical > .btn-group + input[type=submit],
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .header-background .login-form .login-submit.btn-group-vertical > input:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .header-background .login-form .btn-group-vertical > .login-submit.btn-group:not(:first-child):not(:last-child) > input, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
   border-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .header-background .login-form .login-submit[data-toggle="buttons"] > input input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"],
-[data-toggle="buttons"] > .btn input[type="checkbox"], .header-background .login-form
-.login-submit[data-toggle="buttons"] > input input[type="checkbox"], .wpcf7
+[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"], .wpcf7
 [data-toggle="buttons"] > input[type=submit] input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .header-background .login-form
-[data-toggle="buttons"] > .login-submit.btn-group > input input[type="radio"], .wpcf7
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .wpcf7
 [data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .header-background .login-form
-[data-toggle="buttons"] > .login-submit.btn-group > input input[type="checkbox"], .wpcf7
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .wpcf7
 [data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -2912,8 +2880,7 @@ tbody.collapse.show {
   .wpcf7 .input-group-sm > select.input-group-addon,
   .wpcf7 .input-group-sm > textarea.input-group-addon, .wpcf7 .input-group-sm > .input-group-addon.wpcf7-validation-errors,
   .input-group-sm > .input-group-addon,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn, .header-background .login-form
-  .input-group-sm > .login-submit.input-group-btn > input.input-group-addon, .wpcf7
+  .input-group-sm > .input-group-btn > .input-group-addon.btn, .wpcf7
   .input-group-sm > .input-group-btn > input.input-group-addon[type=submit] {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem; }
@@ -2936,8 +2903,7 @@ tbody.collapse.show {
   .wpcf7 .input-group-lg > select.input-group-addon,
   .wpcf7 .input-group-lg > textarea.input-group-addon, .wpcf7 .input-group-lg > .input-group-addon.wpcf7-validation-errors,
   .input-group-lg > .input-group-addon,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn, .header-background .login-form
-  .input-group-lg > .login-submit.input-group-btn > input.input-group-addon, .wpcf7
+  .input-group-lg > .input-group-btn > .input-group-addon.btn, .wpcf7
   .input-group-lg > .input-group-btn > input.input-group-addon[type=submit] {
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem; }
@@ -2972,21 +2938,21 @@ tbody.collapse.show {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .header-background .login-form .login-submit.input-group-btn > input, .wpcf7 .input-group-btn > input[type=submit] {
+  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit] {
     position: relative;
     flex: 1; }
-    .input-group-btn > .btn + .btn, .header-background .login-form .login-submit.input-group-btn > input + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .header-background .login-form .login-submit.input-group-btn > .btn + input, .header-background .login-form .login-submit.input-group-btn > input + input, .header-background .login-form .wpcf7 .login-submit.input-group-btn > input[type=submit] + input, .wpcf7 .input-group-btn > .btn + input[type=submit], .header-background .login-form .wpcf7 .login-submit.input-group-btn > input + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit] {
+    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit] {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .header-background .login-form .login-submit.input-group-btn > input:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .input-group-btn > .btn:active, .header-background .login-form .login-submit.input-group-btn > input:active, .wpcf7 .input-group-btn > input[type=submit]:active, .input-group-btn > .btn:hover, .header-background .login-form .login-submit.input-group-btn > input:hover, .wpcf7 .input-group-btn > input[type=submit]:hover {
+    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .header-background .login-form .login-submit.input-group-btn:not(:last-child) > input, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit],
+  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit],
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .header-background .login-form .login-submit.input-group-btn:not(:first-child) > input, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit],
+  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit],
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .header-background .login-form .login-submit.input-group-btn:not(:first-child) > input:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .input-group-btn:not(:first-child) > .btn:active, .header-background .login-form .login-submit.input-group-btn:not(:first-child) > input:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .input-group-btn:not(:first-child) > .btn:hover, .header-background .login-form .login-submit.input-group-btn:not(:first-child) > input:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -3697,7 +3663,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .header-background .login-form .login-submit > input .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge {
   position: relative;
   top: -1px; }
 
@@ -6274,7 +6240,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.text-truncate, .bbp-single-forum .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -9096,269 +9062,13 @@ h1.navbar-brand a:hover {
   .server-list-container .ala {
     margin-bottom: 20px !important; }
 
-/*body {
-    // filter: blur(5px);
-    transition: all 0.2s ease
-}
-
-.no-blur {
-    filter: none;
-}
-
-div {
-    font-family: Roboto, Arial;
-}
-
-.wrapper {
-    background-color: $bg1;
-    // padding: 0;
-
-    .container {
-        // padding: 0;
-    }
-}
-
-.entry-header {
-    .entry-title {
-        color: #eee;
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: uppercase;
-        float: left;
-        width: 100%;
-        padding: 15px;
-
-        @extend .stripe-test;
-    }
-}
-
-.header {
-    height: 170px;
-
-    div {
-        height: 90px;
-            line-height: 40px;
-    }
-
-    img.banner {
-        position: relative;
-        width: 250px;
-        z-index: 100;
-        left: -50%;
-        top: -70px
-    }
-}
-
-.heading1 {
-  font-size: 60px;
-  font-weight: 3000;
-  font-family: Iceland;
-  color: white;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(5, 199, 247), 0 0 35px rgb(5, 199, 247), 0 0 40px rgb(5, 199, 247);
-  
-  color: #228DFF; 
-}
-
-.bevelled {
-  background-color: #1d1d1d;
-  border: 1px solid #000;
-  background-image: linear-gradient(to top, #1a1b1f, #212528);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-  color: white;
-}
-
-.btn {
-    background-color: #1d1d1d;
-    border: 1px solid #000;
-    background-image: linear-gradient(to top, #1a1b1f, #212528);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-    color: white;
-}
-
-.btn:hover {
-
-    box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
-    background-image: linear-gradient(to top, #096aa1, #26c3f6);
-}
-
-.btn-header {
-    text-align: center;
-}
-
-.stripe-test {
-    background: repeating-linear-gradient(
-        -45deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.5) 7px,
-        rgba(0, 0, 0, 0.5) 0px,
-        rgba(1, 0, 0, 0.8) 5px
-    ),
-    // url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/old_map_@2X.png);
-}
-
-.bg-test {
-    background-color: #202427;
-    z-index: 998;
-    position: relative;
-    padding-bottom: 10px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .5), inset 0 1px 1px rgba(255, 255, 255, .2);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .5), inset 0 1px 1px rgba(255, 255, 255, .2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .5), inset 0 1px 1px rgba(255, 255, 255, .2);
-    border: 1px solid #000;
-    border-top: 0;
-    min-height: 500px;
-}
-
-.content-test {
-    background: #212528;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-    border: 1px solid #000;
-    padding: 20px;
-    z-index: 0;
-    border-top: 0;
-    margin-top: 0;
-    color: #ccc;
-    margin: 0;
-}
-
-.post-img {
-    width: 64px; 
-    height: 64px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 5px;
-    margin-right: 5px;
-
-    transition: all .2s ease-in-out;
-}
-
-.post-img:hover {
-    box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
-}
-
-.post-img-big {
-    width: 100%; 
-    //max-height: 100px;
-    //height: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
-}
-
-.post-list-compact {
-    width: 100%;
-
-    .post {
-        margin-top: 0px;
-        padding: 8px;
-
-
-
-        .post-meta {
-            flex-grow: 1; 
-            justify-content: center; 
-            margin-left: 8px;
-        }
-    }
-
-    .post ~ .post {
-        margin-top: 12px;
-    }
-
-    .date {
-        color: #444;
-        font-size: 12px;
-    }
-
-    .author {
-        color: $primary-color;
-        font-size: 12px;
-    }
-}
-
-.copyright {
-    font-size: 12px;
-    color: #424242;
-
-    a {
-        color: #075b64;
-
-    }
-}
-
-.box-title {
-    padding: 6px; 
-    padding-left: 12px; 
-    padding-top: 9px; 
-    text-transform: uppercase;
-    font-family: Roboto; 
-    font-weight: 800; 
-    font-size: 14px;
-}
-
-.widget-title {
-    @extend .box-title;
-    @extend .stripe-test;
-    @extend .bevelled;
-
-    
-        margin-bottom: 0px;
-    
-}
-
-.avatar-block {
-    @extend .content-test;
-}
-
-///
-// Navbar
-.navbar {
-
-    padding: 0;
-    background-color: rgba(16, 16, 16, 0);
-
-    .active {
-        color: white;
-        background-image: linear-gradient(to top, darken($primary-color, 20%), $primary-color);
-    }
-
-    li {
-        transition: all .2s ease-in-out;
-        opacity: 1.0;
-        line-height: 40px;
-    }
-
-    li:hover {
-        color: white;
-        box-shadow: 0 0 10px rgba(5,199,247,0.5), inset 0 0 1px 1px #05c7f7;
-        background-image: -webkit-linear-gradient(bottom, #096aa1, #26c3f6);
-        background-image: -moz-linear-gradient(bottom, #096aa1, #26c3f6);
-        background-image: -o-linear-gradient(bottom, #096aa1, #26c3f6);
-        background-image: linear-gradient(to top, #096aa1, #26c3f6);
-        //background-color: green;
-    }
-
-
-
-    .btn {
-        padding: 0;
-    }
-}
-
-.wp-post-image {
-    width: 100%;
-}
-
-.entry-content {
-    @extend .bevelled;
-    @extend .content-test;
-}*/
 * {
   font-family: Montserrat, sans-serif; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 body {
   background-color: #202427; }
@@ -9376,7 +9086,6 @@ nav.navbar-custom.navbar-absolute {
 nav.navbar-custom {
   background: rgba(0, 0, 0, 0.8);
   z-index: 100;
-  font-family: 'Titillium Web', sans-serif;
   -moz-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.3);
@@ -9572,7 +9281,6 @@ nav.navbar-custom {
       background: red;
       height: 15px;
       width: 15px;
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 12px;
       bottom: -3px;
       right: -2px;
@@ -9596,17 +9304,27 @@ nav.navbar-custom {
       opacity: 1;
       max-height: 300px; }
   .header-background .login-form {
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 20vh;
-    width: 500px;
-    margin: auto;
-    transition: all ease 2.5s; }
-    .header-background .login-form #user_login {
-      float: right; }
-    .header-background .login-form #user_pass {
-      float: right; }
+    /*background-color: rgba(0,0,0,0.8); 
+      top: 20vh; 
+      width: 500px; 
+      margin: auto;
 
-.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .login-form .login-submit > input, .header-background .login-form .userbuttons .row .login-submit > input, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, #bbpress-forums, #bbpress-forums li.bbp-header,
+      transition: all ease 2.5s;
+
+      #user_login {
+          float: right;
+      }
+
+      #user_pass {
+          float: right;
+      }
+
+      .login-submit > input {
+          @extend .btn;
+          @extend .btn-primary;
+      }*/ }
+
+.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, #bbpress-forums, #bbpress-forums li.bbp-header,
 #bbpress-forums li.bbp-footer, .widget.buddypress.widget_bp_core_members_widget .item-options, .widget.widget_useronline > #useronline-count, .widget.widget_useronline #useronline-browsing-site {
   background-color: #1d1d1d;
   border: 1px solid #000;
@@ -9640,8 +9358,7 @@ nav.navbar-custom {
   -webkit-text-fill-color: transparent; }
 
 .post-list-compact {
-  width: 100%;
-  font-family: Montserrat, sans-serif; }
+  width: 100%; }
   .post-list-compact .post {
     margin-top: 0px;
     padding: 8px; }
@@ -9652,7 +9369,6 @@ nav.navbar-custom {
       font-size: 13px; }
   .post-list-compact .title {
     font-size: 23px;
-    font-family: Montserrat, sans-serif;
     font-weight: 500;
     color: white;
     margin-bottom: 7px;
@@ -9693,7 +9409,6 @@ nav.navbar-custom {
   padding-left: 12px;
   padding-top: 9px;
   text-transform: uppercase;
-  font-family: Roboto;
   font-weight: 800;
   font-size: 14px; }
 
@@ -9753,6 +9468,15 @@ nav.navbar-custom {
   font-size: 16px;
   list-style: none;
   margin-bottom: 5px; }
+
+.widget_display_topics .bbp-author-avatar > img {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px; }
+
+.widget_display_topics .title {
+  white-space: nowrap; }
 
 .topic-desc > a {
   line-height: 50px;
@@ -10177,14 +9901,17 @@ div.bbp-topic-tags {
 -------------------------------------------------------------- */
 span.bbp-admin-links {
   float: right;
-  color: #ddd; }
+  color: #555; }
 
 span.bbp-admin-links a {
-  color: #bbb;
+  color: #555;
   font-weight: normal;
   font-size: 10px;
   text-transform: uppercase;
   text-decoration: none; }
+
+span.bbp-admin-links a:hover {
+  color: #777; }
 
 fieldset span.bbp-admin-links {
   float: left; }
@@ -10933,6 +10660,7 @@ body.my-account #bbpress-forums {
 .thumbnail {
   width: 48px;
   height: 48px;
+  min-width: 48px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -10943,9 +10671,10 @@ body.my-account #bbpress-forums {
 .bbp-single-forum {
   background-color: #23272A;
   padding: 15px;
-  border-bottom: 1px solid #181b1d; }
+  border-bottom: 1px solid #181b1d;
+  font-size: 12px; }
   .bbp-single-forum .title {
-    font-size: 18px;
+    font-size: 14px;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     color: #D0D0D0; }
@@ -11010,6 +10739,174 @@ span.bbp-reply-post-date {
 
 .widget.widget_useronline > #useronline-count, .widget.widget_useronline #useronline-browsing-site {
   padding: 15px; }
+
+.bbp-single-forum .bbp-author-avatar img {
+  min-width: 48px;
+  min-height: 48px; }
+
+.login-form {
+  /*html {
+        overflow-y: scroll; 
+    }*/
+  /*body {
+        background:$body-bg;
+        font-family: 'Titillium Web', sans-serif;
+    }*/ }
+  .login-form *, .login-form *:before, .login-form *:after {
+    box-sizing: border-box; }
+  .login-form .logo {
+    width: 120px;
+    margin-bottom: 20px; }
+  .login-form a {
+    text-decoration: none;
+    color: #095aad;
+    transition: .5s ease; }
+    .login-form a:hover {
+      color: #084d95; }
+  .login-form .form {
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); }
+  .login-form .tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0; }
+    .login-form .tab-group:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .login-form .tab-group li a {
+      display: block;
+      text-decoration: none;
+      padding: 8px;
+      background: rgba(160, 179, 176, 0.25);
+      color: #a0b3b0;
+      font-size: 20px;
+      float: left;
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease; }
+      .login-form .tab-group li a:hover {
+        background: #084d95;
+        color: #ffffff; }
+    .login-form .tab-group .active a {
+      background: #095aad;
+      color: #ffffff; }
+  .login-form .tab-content > div:last-child {
+    display: none; }
+  .login-form h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 0 40px; }
+  .login-form label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 16px; }
+    .login-form label .req {
+      margin: 2px;
+      color: #095aad; }
+  .login-form label.active {
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px; }
+    .login-form label.active .req {
+      opacity: 0; }
+  .login-form label.highlight {
+    color: #ffffff; }
+  .login-form input, .login-form textarea {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+    border-radius: 0;
+    transition: border-color .25s ease, box-shadow .25s ease; }
+    .login-form input:focus, .login-form textarea:focus {
+      outline: 0;
+      border-color: #095aad; }
+  .login-form textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical; }
+  .login-form .field-wrap {
+    position: relative;
+    margin-bottom: 40px; }
+  .login-form .top-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .login-form .top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%; }
+    .login-form .top-row > div:last-child {
+      margin: 0; }
+  .login-form .button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #095aad;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none; }
+    .login-form .button:hover, .login-form .button:focus {
+      background: #084d95; }
+  .login-form .button-block {
+    display: block;
+    width: 100%; }
+  .login-form .forgot {
+    margin-top: -20px;
+    text-align: right;
+    color: #ffffff; }
+  .login-form .forgot a {
+    color: #ddd; }
+  .login-form .forgot a:hover {
+    color: #ffffff; }
+  .login-form #steam {
+    height: 66px;
+    text-align: center;
+    width: 207px;
+    margin: auto; }
+    .login-form #steam a {
+      position: relative;
+      display: block;
+      /*img.top {
+                position: relative;
+            }
+
+            img.bottom {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }*/ }
+      .login-form #steam a img {
+        position: absolute;
+        height: 46px;
+        top: 0;
+        left: 0;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        -o-transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out; }
+      .login-form #steam a img.top:hover {
+        opacity: 0; }
 
 .header {
   background-color: #1D1D1D;

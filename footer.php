@@ -79,7 +79,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 -->
 		<div class="copyright" style="text-align: center" >
-			© 2016 - 2017 D43 Gaming Clan. All rights reserved. Powered by <a href="https://wordpress.org/">Wordpress</a>. <!-- Created by <a href="http://schoerkhuber.net">schoerkhuber.net --></a>.
+			© 2016 - 2017 D43 Gaming Clan. All rights reserved. Powered by <a href="https://wordpress.org/">Wordpress</a> <!-- Created by <a href="http://schoerkhuber.net">schoerkhuber.net --></a>.
 		</div>
 	</div>
 

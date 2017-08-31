@@ -463,15 +463,19 @@ div.bbp-topic-tags {
 
 span.bbp-admin-links {
 	float: right;
-	color: #ddd;
+	color: #555;
 }
 span.bbp-admin-links a {
-	color: #bbb;
+	color: #555;
 	font-weight: normal;
 	font-size: 10px;
 	text-transform: uppercase;
 	text-decoration: none;
 }
+span.bbp-admin-links a:hover {
+	color: #777;
+}
+
 fieldset span.bbp-admin-links {
 	float: left;
 }
@@ -1356,7 +1360,8 @@ body.my-account #bbpress-forums {
 
 .thumbnail {
     width: 48px; 
-    height: 48px;
+	height: 48px;
+	min-width: 48px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1372,14 +1377,16 @@ body.my-account #bbpress-forums {
 	background-color: #23272A;;
     padding: 15px;
 	border-bottom: 1px solid #181b1d;
+	font-size: 12px;
 
 	// @extend .bevelled;
 
 	.title {
-		font-size: 18px;
+		font-size: 14px;
         font-family: Montserrat, sans-serif;
         font-weight: 500;
 		color: #D0D0D0;
+		@extend .text-truncate;
 	}
 
 	.postcount {
@@ -1480,5 +1487,12 @@ span.bbp-reply-post-date {
 	& > #useronline-count, #useronline-browsing-site {
 		padding: 15px;
 		@extend .bevelled;
+	}
+}
+
+.bbp-single-forum .bbp-author-avatar {
+	img {
+		min-width: 48px;
+		min-height: 48px;
 	}
 }
