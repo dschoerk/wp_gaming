@@ -1372,28 +1372,40 @@ body.my-account #bbpress-forums {
 }
 
 .bbp-single-forum {
-
-	// margin-bottom: 20px;
 	background-color: #23272A;;
     padding: 15px;
 	border-bottom: 1px solid #181b1d;
 	font-size: 12px;
 
-	// @extend .bevelled;
+	.post-title {
+		flex-grow: 2; 
+		width: 200px;
 
-	.title {
-		font-size: 14px;
-        font-family: Montserrat, sans-serif;
-        font-weight: 500;
-		color: #D0D0D0;
-		@extend .text-truncate;
+		.title {
+			font-size: 14px;
+			font-weight: 500;
+			color: #D0D0D0;
+			@extend .text-truncate;
+		}
 	}
 
-	.postcount {
+	.postcount-col, .replycount-col {
+		max-width: 70px;
+		text-align: center; 
+		flex-grow: 1;
+		flex-shrink: 1;
+		overflow: hidden;
+	}
+
+	.postcount, .replycount {
 		font-size: 18px;
-        font-family: Montserrat, sans-serif;
         font-weight: 500;
 		color: #D0D0D0;
+	}
+
+	.latest-topic {
+		flex-grow: 1; 
+		min-width: 150px;
 	}
 }
 
@@ -1492,7 +1504,36 @@ span.bbp-reply-post-date {
 
 .bbp-single-forum .bbp-author-avatar {
 	img {
-		min-width: 48px;
-		min-height: 48px;
+		width: 32px;
+		height: 32px;
+		min-width: 32px;
+		min-height: 32px;
 	}
+}
+
+.topic-desc {
+    & > a {
+        //line-height: 50px;
+        text-align: center;
+
+        img {
+			width: 32px;
+			height: 32px;
+            vertical-align: middle;
+            margin-left: 10px; }    
+    }
+    
+    .meta {
+        margin-left: 10px;
+        .author {
+            font-size: 12px; }
+        .time  {
+            margin-left: 5px;
+            color: #666;
+            font-size: 12px; }
+    }
+}
+
+.testrole > a.bbp-author-name {
+    color: red;
 }

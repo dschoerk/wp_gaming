@@ -625,28 +625,3 @@ nav.navbar-custom{
         white-space: nowrap;
     }
 }
-
-.topic-desc {
-    & > a {
-        line-height: 50px;
-        text-align: center;
-
-        img {
-            vertical-align: middle;
-            margin-left: 10px; }    
-    }
-    
-    .meta {
-        margin-left: 10px;
-        .author {
-            font-size: 12px; }
-        .time  {
-            margin-left: 5px;
-            color: #666;
-            font-size: 12px; }
-    }
-}
-
-.testrole > a.bbp-author-name {
-    color: red;
-}

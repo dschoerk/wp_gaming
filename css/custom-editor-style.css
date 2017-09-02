@@ -6240,7 +6240,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .text-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate, .bbp-single-forum .title {
+.text-truncate, .bbp-single-forum .post-title .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -9478,25 +9478,6 @@ nav.navbar-custom {
 .widget_display_topics .title {
   white-space: nowrap; }
 
-.topic-desc > a {
-  line-height: 50px;
-  text-align: center; }
-  .topic-desc > a img {
-    vertical-align: middle;
-    margin-left: 10px; }
-
-.topic-desc .meta {
-  margin-left: 10px; }
-  .topic-desc .meta .author {
-    font-size: 12px; }
-  .topic-desc .meta .time {
-    margin-left: 5px;
-    color: #666;
-    font-size: 12px; }
-
-.testrole > a.bbp-author-name {
-  color: red; }
-
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
@@ -10673,16 +10654,26 @@ body.my-account #bbpress-forums {
   padding: 15px;
   border-bottom: 1px solid #181b1d;
   font-size: 12px; }
-  .bbp-single-forum .title {
-    font-size: 14px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    color: #D0D0D0; }
-  .bbp-single-forum .postcount {
+  .bbp-single-forum .post-title {
+    flex-grow: 2;
+    width: 200px; }
+    .bbp-single-forum .post-title .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #D0D0D0; }
+  .bbp-single-forum .postcount-col, .bbp-single-forum .replycount-col {
+    max-width: 70px;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden; }
+  .bbp-single-forum .postcount, .bbp-single-forum .replycount {
     font-size: 18px;
-    font-family: Montserrat, sans-serif;
     font-weight: 500;
     color: #D0D0D0; }
+  .bbp-single-forum .latest-topic {
+    flex-grow: 1;
+    min-width: 150px; }
 
 .bbp-forums-list li {
   display: inline-block !important; }
@@ -10741,8 +10732,30 @@ span.bbp-reply-post-date {
   padding: 15px; }
 
 .bbp-single-forum .bbp-author-avatar img {
-  min-width: 48px;
-  min-height: 48px; }
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px; }
+
+.topic-desc > a {
+  text-align: center; }
+  .topic-desc > a img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-left: 10px; }
+
+.topic-desc .meta {
+  margin-left: 10px; }
+  .topic-desc .meta .author {
+    font-size: 12px; }
+  .topic-desc .meta .time {
+    margin-left: 5px;
+    color: #666;
+    font-size: 12px; }
+
+.testrole > a.bbp-author-name {
+  color: red; }
 
 .login-form {
   /*html {
