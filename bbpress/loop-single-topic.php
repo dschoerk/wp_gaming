@@ -207,7 +207,7 @@
 			<li class="d-flex flex-row align-items-center topic-desc">
 				<?php echo($author_img); ?>
 				<div class="meta">
-					<div class="title"><a href="<?php echo($permalink); ?>"><?php bbp_topic_title( $topic_id ); ?></a></div>
+					<div class="title"><a href="<?php bbp_forum_last_reply_url( bbp_get_forum_id() ) ?>"><?php bbp_topic_title( $topic_id ); ?></a></div>
 					<span class="author">by <?php echo( $author_link ); ?></span>
 					<span class="time"><?php bbp_topic_last_active_time( $topic_id ); ?></span>
 				</div>
