@@ -10751,6 +10751,9 @@ span.bbp-reply-post-date {
   /*body {
         background:$body-bg;
         font-family: 'Titillium Web', sans-serif;
+    }*/
+  /*.tab-content > div:last-child {
+        display:none;
     }*/ }
   .login-form *, .login-form *:before, .login-form *:after {
     box-sizing: border-box; }
@@ -10796,8 +10799,6 @@ span.bbp-reply-post-date {
     .login-form .tab-group .active a {
       background: #095aad;
       color: #ffffff; }
-  .login-form .tab-content > div:last-child {
-    display: none; }
   .login-form h1 {
     text-align: center;
     color: #ffffff;
@@ -10816,7 +10817,7 @@ span.bbp-reply-post-date {
       margin: 2px;
       color: #095aad; }
   .login-form label.active {
-    transform: translateY(50px);
+    transform: translateY(40px);
     left: 2px;
     font-size: 14px; }
     .login-form label.active .req {

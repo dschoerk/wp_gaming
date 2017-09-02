@@ -259,31 +259,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 										</a>
 									</div>
 									<ul class="tab-group">
-										<li class="tab active"><a href="#signup">Sign Up</a></li>
-										<li class="tab"><a href="#login">Log In</a></li>
+										<!--  <li class="tab"><a href="#signup">Sign Up</a></li> -->
+										<li class="tab"><a href="/register">Sign Up</a></li>
+										<li class="tab active"><a href="#login">Log In</a></li>
 									</ul>
-									<div class="tab-content">
-										<div id="signup">
-											<!-- <h1>Register</h1> -->
+									<div class="">
+										<!-- <div id="signup">
 											<form action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
 												<div class="field-wrap">
 													<label>
-													Email Address<span class="req">*</span>
+														Username<span class="req">*</span>
 													</label>
-													<input type="email" id="user_login" name="user_login" required autocomplete="off" />
+													<input type="text" id="user_login" name="user_login" required autocomplete="off" />
+												</div>
+												<div class="field-wrap">
+													<label>
+														Email Address<span class="req">*</span>
+													</label>
+													<input type="email" id="user_email" name="user_email" required autocomplete="off" />
 												</div>
 												<div class="field-wrap">
 													<label>
 														Set A Password<span class="req">*</span>
 													</label>
-													<input type="password" id="user_email" name="user_email" required autocomplete="off" />
+													<input type="password" id="user_pass" name="user_pass" required autocomplete="off" />
 												</div>
-												<!-- <div class="field-wrap">
-													<label>
-														Repeat Password<span class="req">*</span>
-													</label>
-													<input type="password" required autocomplete="off" />
-												</div> -->
 												
 												<div class="login_fields">
 													<?php do_action('register_form'); ?>
@@ -293,19 +293,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 													<input type="hidden" name="user-cookie" value="1" />
 												</div>
 											</form>
-										</div>
+										</div> -->
 										<div id="login">
 											<!-- <h1>Welcome Back!</h1> -->
 											<form id="" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+												
 												<div class="field-wrap">
-													<label for="user_login"></label>
+													<label for="user_login">
 														Username <span class="req">*</span>
 													</label>
-													<input type="text" name="log" value="<?php echo esc_attr(stripslashes($user_login)); ?>" id="user_login" required autocomplete="off" />
+													<input type="text" name="log" id="user_login" required autocomplete="off" />
 												</div>
+
 												<div class="field-wrap">
 													<label>
-													Password<span class="req">*</span>
+														Password<span class="req">*</span>
 													</label>
 													<input type="password" name="pwd" value="" id="user_pass" required autocomplete="off" />
 												</div>
@@ -392,7 +394,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		});
 
-		$('.tab a').on('click', function (e) {
+		/*$('.tab a').on('click', function (e) {
 			
 			e.preventDefault();
 			
@@ -405,6 +407,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			
 			$(target).fadeIn(600);
 			
-		});
+		});*/
 	</script>
 </body>

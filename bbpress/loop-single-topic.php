@@ -150,7 +150,7 @@
 
 		<?php do_action( 'bbp_theme_before_topic_started_by' ); ?>
 		<div>
-			<?php printf( __( 'Started by: %1$s', 'bbpress' ), bbp_get_topic_author_link( array( 'size' => '14' ) ) ); ?>
+			<?php printf( __( 'Started by: %1$s', 'bbpress' ), bbp_get_topic_author_link( array( 'size' => '14', 'type' => 'name' ) ) ); ?>
 		</div>
 		<?php do_action( 'bbp_theme_after_topic_started_by' ); ?>
 
@@ -181,7 +181,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-md-4 align-items-center">
 		<!-- <div class="d-flex flex-row">
 			<div class="thumbnail" style="background-image: url('http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png'); margin-left: 25px"></div>
 			<div class="d-flex flex-column" style="flex-grow: 1; justify-content: center;">
@@ -204,7 +204,7 @@
 			// $time = bbp_topic_last_active_time( $topic_id );
 			//$title = bbp_topic_title( $topic_id );
 		?>
-			<li class="d-flex flex-row align-items-stretch topic-desc">
+			<li class="d-flex flex-row align-items-center topic-desc">
 				<?php echo($author_img); ?>
 				<div class="meta">
 					<div class="title"><a href="<?php echo($permalink); ?>"><?php bbp_topic_title( $topic_id ); ?></a></div>
