@@ -313,13 +313,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 												</div>
 
 												<div class="login_fields">
-
-												<p class="forgot"><a href="<?php echo wp_lostpassword_url(); ?>">Forgot Password?</a></p>
-													<p class="forgot">
-														<label for="rememberme">
-															<input type="checkbox" name="rememberme" value="forever" checked="checked" id="rememberme" tabindex="13" /> Remember me
-														</label>
-													</p>
+												<p style="color:#fff; margin-top: -17px;">
+														<input type="checkbox" name="rememberme" value="forever" checked="checked" id="rememberme" tabindex="13" /> Remember me
+														</p>
+												<p class="forgot"><a href="<?php echo wp_lostpassword_url(); ?>">Forgot Password?</a></p>												
 
 													<?php do_action('login_form'); ?>
 													<input type="submit" name="user-submit" value="Log In" tabindex="14" class="button button-block" />

@@ -10852,6 +10852,10 @@ span.bbp-reply-post-date {
     .login-form input:focus, .login-form textarea:focus {
       outline: 0;
       border-color: #095aad; }
+  .login-form input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    display: inline; }
   .login-form textarea {
     border: 2px solid #a0b3b0;
     resize: vertical; }
@@ -10872,6 +10876,7 @@ span.bbp-reply-post-date {
     border: 0;
     outline: none;
     border-radius: 0;
+    margin-top: 20px;
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -10886,7 +10891,7 @@ span.bbp-reply-post-date {
     display: block;
     width: 100%; }
   .login-form .forgot {
-    margin-top: -20px;
+    margin-top: -37px;
     text-align: right;
     color: #ffffff; }
   .login-form .forgot a {

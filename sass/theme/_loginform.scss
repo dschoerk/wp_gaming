@@ -141,6 +141,13 @@ $br: 4px;
         }
     }
 
+    input[type="checkbox"]{
+        width: 10px;
+        height: 10px;
+        display:inline;
+      }
+      
+
     textarea {
         border:2px solid $gray-light;
         resize: vertical;
@@ -172,6 +179,7 @@ $br: 4px;
         border:0;
         outline:none;
         border-radius:0;
+        margin-top: 20px;
         //padding:15px 0;
         font-size:2rem;
         font-weight:$bold;
@@ -192,7 +200,7 @@ $br: 4px;
     }
 
     .forgot {
-        margin-top:-20px;
+        margin-top:-37px;
         text-align:right;
         color:$white;
     }
