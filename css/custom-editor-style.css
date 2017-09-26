@@ -9070,6 +9070,14 @@ h1.navbar-brand a:hover {
   overflow: hidden;
   text-overflow: ellipsis; }
 
+.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, #bbpress-forums, #bbpress-forums li.bbp-header,
+#bbpress-forums li.bbp-footer, .widget.buddypress.widget_bp_core_members_widget .item-options, .widget.widget_useronline > #useronline-count, .widget.widget_useronline #useronline-browsing-site {
+  background-color: #1d1d1d;
+  border: 1px solid #000;
+  background-image: linear-gradient(to top, #1a1b1f, #212528);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  color: white; }
+
 body {
   background-color: #202427; }
 
@@ -9081,7 +9089,7 @@ a:hover {
   padding-left: 35px; }
 
 nav.navbar-custom.navbar-absolute {
-  top: 0px; }
+  top: 1px; }
 
 nav.navbar-custom {
   background: rgba(0, 0, 0, 0.8);
@@ -9143,15 +9151,14 @@ nav.navbar-custom {
     nav.navbar-custom a.nav-link {
       position: static;
       background-image: none;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
       margin-left: 10px; }
+    nav.navbar-custom .nav-link:hover {
+      transform: scale(0.9) !important; }
     nav.navbar-custom .clanlogo {
       overflow: visible;
       position: relative;
       width: 200px;
-      margin-left: 100px; } }
+      margin-left: 37%; } }
   nav.navbar-custom .navbar-nav .nav-link:hover {
     -webkit-transform: scale(1.2) translateY(-1px);
     -moz-transform: scale(1.2) translateY(-1px);
@@ -9336,14 +9343,6 @@ nav.navbar-custom {
           @extend .btn;
           @extend .btn-primary;
       }*/ }
-
-.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, #bbpress-forums, #bbpress-forums li.bbp-header,
-#bbpress-forums li.bbp-footer, .widget.buddypress.widget_bp_core_members_widget .item-options, .widget.widget_useronline > #useronline-count, .widget.widget_useronline #useronline-browsing-site {
-  background-color: #1d1d1d;
-  border: 1px solid #000;
-  background-image: linear-gradient(to top, #1a1b1f, #212528);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-  color: white; }
 
 .post-img {
   width: 100px;

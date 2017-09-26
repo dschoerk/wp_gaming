@@ -70,6 +70,15 @@ $font: Montserrat, sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.bevelled {
+    background-color: #1d1d1d;
+    border: 1px solid #000;
+    background-image: linear-gradient(to top, #1a1b1f, #212528);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
+    color: white;
+}
+
 ///
 
 body {
@@ -86,7 +95,7 @@ a:hover {
 }
 
 nav.navbar-custom.navbar-absolute {
-    top: 0px;
+    top: 1px;
 }
 
 nav.navbar-custom{
@@ -156,16 +165,18 @@ nav.navbar-custom{
         a.nav-link {
             position: static;
             background-image: none;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat; 
             margin-left: 10px;   
         }
+
+        .nav-link:hover {
+            transform: scale(0.9)!important;  
+        }
+
         .clanlogo{
             overflow: visible;
             position: relative;
             width: 200px;   
-            margin-left: 100px;                                 
+            margin-left: 37%;                                 
         }                                
 }
 
@@ -404,14 +415,6 @@ nav.navbar-custom{
           @extend .btn-primary;
       }*/
   }
-}
-
-.bevelled {
-  background-color: #1d1d1d;
-  border: 1px solid #000;
-  background-image: linear-gradient(to top, #1a1b1f, #212528);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .3), inset 0 1px 1px rgba(255, 255, 255, .2);
-  color: white;
 }
 
 .post-img {

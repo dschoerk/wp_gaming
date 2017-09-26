@@ -21,7 +21,7 @@
 	font-size: 12px;
     padding: 20px;
 
-	@extend .bevelled;
+	@extend .bevelled !optional;
 }
 
 #bbpress-forums div.even,
