@@ -651,3 +651,28 @@ nav.navbar-custom{
         white-space: nowrap;
     }
 }
+
+
+.widget_polls-widget {
+    p strong {
+        margin-bottom: 0;
+    }
+
+    .wp-polls {
+        padding-top: 15px;
+        @extend .bevelled; 
+
+        .wp-polls-ul {
+            border: none;
+            box-shadow: none;
+            background: none;
+        }
+    }
+}
+
+.widget.widget_text .textwidget {
+    p {
+        margin: 15px;
+    }
+    @extend .bevelled;
+}
