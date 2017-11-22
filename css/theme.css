@@ -9488,7 +9488,7 @@ nav.navbar-custom {
   min-height: 50px; }
 
 .widget_display_topics .title {
-  white-space: nowrap; }
+  white-space: pre-wrap; }
 
 .widget_polls-widget p strong {
   margin-bottom: 0; }
