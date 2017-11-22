@@ -6420,7 +6420,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 .wrapper {
-  padding: 30px 0; }
+  padding: 0 0; }
 
 #wrapper-hero {
   padding: 0px !important; }
@@ -9070,7 +9070,7 @@ h1.navbar-brand a:hover {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, #bbpress-forums, #bbpress-forums li.bbp-header,
+.bevelled, .header-background .userbuttons .row .btn, .header-background .userbuttons .row .wpcf7 input[type=submit], .wpcf7 .header-background .userbuttons .row input[type=submit], .header-background .userbuttons .dropdown-menu, .widget .widget-title, .widget ul, .widget .avatar-block, .widget .widget-error, #bbpress-forums .bbp-body .status-category, #bbpress-forums .bbp-body .bbp-forum-title, .entry-header:before, #wp-discord, .widget_polls-widget .wp-polls, .widget.widget_text .textwidget, #bbpress-forums, #bbpress-forums li.bbp-header,
 #bbpress-forums li.bbp-footer, .widget.buddypress.widget_bp_core_members_widget .item-options, .widget.widget_useronline > #useronline-count, .widget.widget_useronline #useronline-browsing-site {
   background-color: #1d1d1d;
   border: 1px solid #000;
@@ -9223,7 +9223,7 @@ nav.navbar-custom {
     width: 200px; }
     nav.navbar-custom .clanlogo a.nav-link {
       position: absolute;
-      background-image: url("https://d43.ovh/wordpress/wp-content/themes/d43_theme/img/logo.png");
+      background-image: url("/wp-content/themes/d43_theme/img/logo.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -9489,6 +9489,19 @@ nav.navbar-custom {
 
 .widget_display_topics .title {
   white-space: nowrap; }
+
+.widget_polls-widget p strong {
+  margin-bottom: 0; }
+
+.widget_polls-widget .wp-polls {
+  padding-top: 15px; }
+  .widget_polls-widget .wp-polls .wp-polls-ul {
+    border: none;
+    box-shadow: none;
+    background: none; }
+
+.widget.widget_text .textwidget p {
+  margin: 15px; }
 
 /*
 * Use existing Bootstrap 4 classes and
@@ -10768,6 +10781,9 @@ span.bbp-reply-post-date {
 
 .testrole > a.bbp-author-name {
   color: red; }
+
+#buddypress div#message-thread div.alt {
+  background: none; }
 
 .login-form {
   /*html {
