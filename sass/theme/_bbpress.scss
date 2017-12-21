@@ -19,7 +19,12 @@
 	margin-bottom: 20px;
 	overflow: hidden;
 	font-size: 12px;
+
     padding: 20px;
+	@include media-mob-nav
+  	{
+		padding: 2px;
+	}
 
 	@extend .bevelled !optional;
 }
@@ -1365,8 +1370,15 @@ body.my-account #bbpress-forums {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 5px;
+    //margin-left: 5px;
     margin-right: 5px;
+	margin-left: 25px;
+
+	@include mobile {
+		margin-left: 0px;
+		margin-right: 0px;
+		display: none;
+	}
 
     transition: all .2s ease-in-out;
 }
@@ -1376,6 +1388,7 @@ body.my-account #bbpress-forums {
     padding: 15px;
 	border-bottom: 1px solid #181b1d;
 	font-size: 12px;
+	border-radius: 15px;
 
 	.post-title {
 		flex-grow: 2; 
@@ -1390,11 +1403,15 @@ body.my-account #bbpress-forums {
 	}
 
 	.postcount-col, .replycount-col {
-		max-width: 70px;
+		max-width: 100px;
 		text-align: center; 
 		flex-grow: 1;
 		flex-shrink: 1;
 		overflow: hidden;
+
+		@include mobile{
+			display: none;
+		}
 	}
 
 	.postcount, .replycount {
@@ -1406,6 +1423,20 @@ body.my-account #bbpress-forums {
 	.latest-topic {
 		flex-grow: 1; 
 		min-width: 150px;
+		margin-left: 30px;
+
+		.latest-topic-content {
+			height: 100%;
+			@extend .d-flex;
+			@extend .flex-row;
+			@extend .align-items-center;
+
+			.bbp-author-avatar {
+				@include mobile {
+					display: none;
+				}
+			}
+		}
 	}
 }
 

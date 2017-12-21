@@ -53,6 +53,12 @@ $font: Montserrat, sans-serif;
     }
   }
 
+@mixin mobile {
+    @media (max-width: 991px){
+      @content;
+    }
+  }
+
 @mixin media-lg {
   @media (min-width: 1200px){
     @content;
@@ -90,8 +96,15 @@ a:hover {
 }
 
 .container-fluid {
+  margin-top: 20px;
   padding-right: 35px;
   padding-left: 35px;
+
+  @include media-mob-nav
+  {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 
 nav.navbar-custom.navbar-absolute {

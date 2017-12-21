@@ -6,11 +6,9 @@
   "scripts": {
     "postinstall": "gulp copy-assets"
   },
-
-  "engines" : { 
-  "npm" : ">=2.1.8" 
+  "engines": {
+    "npm": ">=2.1.8"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/holger1411/understrap.git"
@@ -47,6 +45,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-watch": "^4.3.11",
     "merge2": "^1.0.3",
+    "popper.js": "^1.12.9",
     "run-sequence": "^1.2.2",
     "undescores-for-npm": "^1.0.0"
   },

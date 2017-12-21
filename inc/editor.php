@@ -49,11 +49,12 @@ function understrap_tiny_mce_before_init( $settings ) {
           'classes' => 'blockquote-footer',
           'wrapper' => true
       ),
+
 			array(
           'title' => 'Cite',
           'inline' => 'cite'
-      )
-  );
+		)
+   );
   
     if ( isset( $settings['style_formats'] ) ) {
       $orig_style_formats = json_decode($settings['style_formats'],true);

@@ -118,6 +118,13 @@ function bbp_enable_visual_editor( $args = array() ) {
 }
 add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );
 
+// disable plain text editor
+function my_editor_settings($settings) {
+	$settings['quicktags'] = false;
+	return $settings;
+}
+add_filter('wp_editor_settings', 'my_editor_settings');
+
 // colored roles
 //add_filter('bbp_get_topic_author_link', 'bbp_get_topic_author_link_hook', 10, 2 );
 function bbp_get_topic_author_link_hook($author_link, $args) {

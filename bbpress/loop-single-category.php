@@ -89,7 +89,7 @@
 						<div class="post-title">
 
 							<div class="d-flex flex-row">
-								<div class="thumbnail" style="background-image: url('<?php echo($thumbnail); ?>'); margin-left: 25px"></div>
+								<div class="thumbnail" style="background-image: url('<?php echo($thumbnail); ?>');"></div>
 
 								<div>
 									<div class="title"><a href="<?php echo($permalink); ?>"><?php echo($title); ?></a></div>
@@ -118,7 +118,7 @@
 							</div>
 						</div>
 						<div class="latest-topic">
-							<div class="d-flex flex-row align-items-center">
+							<div class="latest-topic-content">
 								<!-- <div class="thumbnail" style="background-image: url('http://www.hbhud.com/wp-content/uploads/2011/06/awesome_smiley-300x300.png'); margin-left: 25px"></div> -->
 								<div style="flex-grow: 0;">
 									<?php echo bbp_get_topic_author_link( array( 'post_id' => $lastActiveTopic,"type" => "avatar", "size" => 42 ) ); ?>
