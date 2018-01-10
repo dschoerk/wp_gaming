@@ -563,7 +563,7 @@ nav.navbar-custom{
         margin-bottom: 0px;
     }
 
-    ul {
+    > ul {
         padding: 15px;
         @extend .bevelled;
 
@@ -688,4 +688,20 @@ nav.navbar-custom{
         margin: 15px;
     }
     @extend .bevelled;
+}
+
+.cbxuseronline_widget {
+    @extend .bevelled;
+
+    p {
+        font-size: 12px;
+    }
+
+    ul.cbxuseronline_memberlist {
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+    }
 }
