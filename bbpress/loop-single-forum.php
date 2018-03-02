@@ -10,7 +10,7 @@
 ?>
 
 <ul id="bbp-forum-<?php bbp_forum_id(); ?>" <?php bbp_forum_class(); ?>>
-asdf
+
 	<li class="bbp-forum-info">
 
 		<?php if ( bbp_is_user_home() && bbp_is_subscriptions() ) : ?>

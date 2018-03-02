@@ -128,7 +128,7 @@
 									<div>
 										<span class="author"><?php echo($lastActiveTopicAuthor->display_name); ?></span>, 
 										<span>
-											<?php bbp_forum_freshness_link ( $sub_forum->ID ); ?>
+											<?php bbp_forum_last_active_time( $sub_forum->ID ); ?>
 										</span>
 										<!-- <span class="date"><span class="fa fa-calendar"></span> 01.01.1970</span> -->
 									</div>
